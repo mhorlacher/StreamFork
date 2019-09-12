@@ -11,7 +11,7 @@ class StreamClient():
 
         self.sock.connect(address)
         self.sock.shutdown(socket.SHUT_WR)
-        logging.info('Connected to %s' % self.sock.getpeername())
+        logging.info('Connected to %s' % str(self.sock.getpeername()))
 
     def __enter__(self):
         return self
